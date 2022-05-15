@@ -66,7 +66,7 @@
 					<div class="modal-body">
 
 						<div class="mb-3 row">
-							<label for="addUserField" class="col-md-3 form-label">Complain
+							<label for="category" class="col-md-3 form-label">Complain
 								Category*</label>
 							<div class="col-md-9">
 								<input type="text" class="form-control" id="category"
@@ -75,7 +75,7 @@
 						</div>
 
 						<div class="mb-3 row">
-							<label for="addCityField" class="col-md-3 form-label">Complain*</label>
+							<label for="complain" class="col-md-3 form-label">Complain*</label>
 							<div class="col-md-9">
 								<textarea rows="5" cols="" class="form-control" id="complain"
 									name="complain"></textarea>
@@ -89,6 +89,53 @@
 							data-bs-dismiss="modal">Close</button>
 						<button type="submit" class="btn btn-primary">Save</button>
 
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- 	update modal -->
+	<div class="modal fade" id="updateModal" tabindex="-1" data-bs-backdrop="static"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" >
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Update Complain</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<form id="updateComplainForm">
+					<div class="modal-body">
+
+						<input type="hidden" name="id" id="id" value=""> <input
+							type="hidden" name="trid" id="trid" value="">
+						<div class="mb-3 row">
+						<input type="hidden" class="form-control" id="id"
+									name="id">
+							<label for="updateCategory" class="col-md-3 form-label">Complain
+								Category*</label>
+							<div class="col-md-9">
+								<input type="text" class="form-control" id="updateCategory"
+									name="updateCategory">
+							</div>
+						</div>
+
+						<div class="mb-3 row">
+							<label for="updateComplain" class="col-md-3 form-label">Complain*</label>
+							<div class="col-md-9">
+								<textarea rows="5" cols="" class="form-control" id="updateComplain"
+									name="updateComplain"></textarea>
+							</div>
+						</div>
+
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary"
+							data-bs-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-primary">Save</button>
 					</div>
 				</form>
 			</div>
