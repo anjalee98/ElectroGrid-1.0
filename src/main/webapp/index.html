@@ -1,10 +1,47 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap5.0.1.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/datatables-1.10.25.min.css" />
+  <title>ElectroGrid</title>
 </head>
+
 <body>
-<h1>Welcome page</h1>
+  <div class="container-fluid">
+    <h2 class="text-center">ElectroGrid</h2>
+    <p class="datatable design text-center">Complains</p>
+    <div class="row">
+      <div class="container">
+       
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <table id="example" class="table">
+              <thead>
+                <th>Id</th>
+                <th>Complain Category</th>
+                <th>Complain Description</th>
+                <th>Options</th>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/dt-1.10.25datatables.min.js"></script>
+  
 </body>
+
 </html>
