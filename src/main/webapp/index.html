@@ -2,47 +2,98 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap CSS -->
-  <link href="css/bootstrap5.0.1.min.css" rel="stylesheet" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/datatables-1.10.25.min.css" />
-  <title>ElectroGrid</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap CSS -->
+<link href="css/bootstrap5.0.1.min.css" rel="stylesheet"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"
+	href="css/datatables-1.10.25.min.css" />
+<link rel="stylesheet" type="text/css" href="css/complain.css" />
+
+<title>ElectroGrid</title>
 </head>
 
 <body>
-  <div class="container-fluid">
-    <h2 class="text-center">ElectroGrid</h2>
-    <p class="datatable design text-center">Complains</p>
-    <div class="row">
-      <div class="container">
-       
-        <div class="row">
-          <div class="col-md-2"></div>
-          <div class="col-md-8">
-            <table id="table" class="table">
-              <thead>
-                <th>Id</th>
-                <th>Complain Category</th>
-                <th>Complain Description</th>
-                <th>Options</th>
-              </thead>
-              <tbody>
-              </tbody>
-            </table>
-          </div>
-          <div class="col-md-2"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="container-fluid">
+		<h2 class="text-center">ElectroGrid</h2>
+		<p class="datatable design text-center">Complains</p>
+		<div class="row">
+			<div class="container">
+				<div class="btnAdd">
+					<a href="#!" data-id="" data-bs-toggle="modal"
+						data-bs-target="#addComplainModal" class="btn btn-success btn-sm">Add
+						New Complain</a>
+				</div>
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-8">
+						<table id="table" class="table">
+							<thead>
+								<th>Id</th>
+								<th>Complain Category</th>
+								<th>Complain Description</th>
+								<th>Options</th>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-  <script src="js/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-  <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/dt-1.10.25datatables.min.js"></script>
-    <script src="js/complain.js" crossorigin="anonymous"></script>
-  
+	<script src="js/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/dt-1.10.25datatables.min.js"></script>
+	<script src="js/complain.js" crossorigin="anonymous"></script>
+
+	<!--   modals -->
+
+	<div class="modal fade" id="addComplainModal" data-bs-backdrop="static"
+		tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Add Complain</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<form id="addComplain" action="">
+					<div class="modal-body">
+
+						<div class="mb-3 row">
+							<label for="addUserField" class="col-md-3 form-label">Complain
+								Category*</label>
+							<div class="col-md-9">
+								<input type="text" class="form-control" id="category"
+									name="category">
+							</div>
+						</div>
+
+						<div class="mb-3 row">
+							<label for="addCityField" class="col-md-3 form-label">Complain*</label>
+							<div class="col-md-9">
+								<textarea rows="5" cols="" class="form-control" id="complain"
+									name="complain"></textarea>
+							</div>
+						</div>
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary"
+							data-bs-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-primary">Save</button>
+
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
